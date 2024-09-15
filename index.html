@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Audio player for background music -->
+    <audio id="birthdayAudio" loop>
+      <source src="./birthday_song.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Add a button to play the song -->
+    <button onclick="document.getElementById('birthdayAudio').play();">
+      Play Birthday Song
+    </button>
+
+    <div class="container">
+      <!-- Add Muzza's image -->
+      <img src="./muzza.jpg" alt="Muzza's Picture" class="muzza-img" />
+
+      <h1>Happy Birthday Muzza!</h1>
+      <div class="balloons">
+        <div class="balloon red"></div>
+        <div class="balloon blue"></div>
+        <div class="balloon yellow"></div>
+      </div>
+    </div>
+
+    <!-- Optional: Add a script to autoplay if browser allows -->
+    <script>
+      document
+        .getElementById("birthdayAudio")
+        .play()
+        .catch(function () {
+          // Autoplay was prevented. Show the play button.
+          console.log("Autoplay prevented");
+        });
+    </script>
+  </body>
+</html>
